@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function ChangeForm(props) {
+function VolumeForm(props) {
     //Dimensions state
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -57,4 +57,4 @@ function ChangeForm(props) {
         )
     }
 
-export default ChangeForm
+export default VolumeForm

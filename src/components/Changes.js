@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ChangeForm from './ChangeForm';
+import VolumeForm from './VolumeForm';
 import './styles/changes.css'
 
 function Changes() {
@@ -13,12 +13,11 @@ function Changes() {
         setVolume(enterDimensionsData.volume/1000000)
      
     }
-    console.log(volume)
-    
     return (
         <>
+        
          <h5>{volume} m³</h5>
-         <ChangeForm  onSave={saveDimensions}/>
+         <VolumeForm  onSave={saveDimensions}/>
         </>
     )
 
