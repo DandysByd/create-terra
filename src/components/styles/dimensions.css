@@ -1,0 +1,19 @@
+.dimensions-input{
+    width: 60%;
+}
+.dimensions{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-fields input{
+    height: 60px;
+    width: 200px;
+    font-size: 50px;
+}

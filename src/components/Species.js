@@ -3,7 +3,6 @@ import './styles/species.css'
 
 const Species = (props) => {
 
-    const [animal, setAnimal] = useState(null)
     const [specie, setSpecie] = useState(0)
 
     const animals = [
@@ -48,8 +47,7 @@ const Species = (props) => {
     ]
 
     const setAnimalType = (name) => {
-        setAnimal(name)
-        props.onSaveSpecies(animal);
+        props.onSaveSpecies(name);
     }
 
     const showedAnimal = (species) => {
@@ -58,7 +56,7 @@ const Species = (props) => {
     }
 
     useEffect(() => {
-    }, [animal, specie])
+    }, [specie])
     
     
     

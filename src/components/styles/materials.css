@@ -1,0 +1,22 @@
+.materials-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.materials-wrapper div{
+    background-color: black;
+    cursor: pointer;
+    width: 33%;
+    text-align: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.materials-wrapper div p {
+    margin:13px auto;
+}
+.selected-div{
+    background-color: orange !important;
+}

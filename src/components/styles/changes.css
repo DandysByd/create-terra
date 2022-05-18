@@ -1,8 +1,4 @@
-.dimensions{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
+
 .species{
     display: flex;
     align-items: center;
