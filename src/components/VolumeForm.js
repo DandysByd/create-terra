@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function VolumeForm(props) {
     //Dimensions state
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
     const [depth, setDepth] = useState(0);
+    const [volume, setVolume] = useState(0)
    
     //Dimensions setters
     function getValueWidth(e) {
@@ -21,16 +22,21 @@ function VolumeForm(props) {
         e.preventDefault();
 
     }
+
+    useEffect(()=>{
+    },[width,height,depth])
+
     const onChangeHandler = () =>{
+
+        setVolume(width*height*depth)
         
         const dimensions = {
             width : width,
             height : height,
             depth : depth,
-            volume : width*height*depth
+            volume : volume
         }
         props.onSave(dimensions);
-        console.log(dimensions)
         
     }
 

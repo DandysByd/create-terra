@@ -8,13 +8,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-body">
         <h1>Create your own terrarium design</h1>
         <h3>Preview</h3>
-        <Changes/>
-        
-        
-      </header>
+        <div className='prew'></div>
+        <Changes />
+
+
+      </div>
     </div>
   );
 }

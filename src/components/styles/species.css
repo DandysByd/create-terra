@@ -1,0 +1,31 @@
+.animal-button{
+    height: 300px;
+    cursor: pointer;
+    width: 33.3%;
+    display: grid;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.animal-selection{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.show-card{
+    width: 100vw;
+    height: 600px;
+    opacity: 0.5;
+}
+
+.hide-card{
+    display: none;
+}
+.hide-info-text{
+    display: none;
+}
+.show-info-text{
+    display: block;
+}

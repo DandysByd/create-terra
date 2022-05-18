@@ -1,7 +1,7 @@
 #root{
   font-family: 'Fredoka', sans-serif;  
 }
-.App-header {
+.App-body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -14,4 +14,9 @@
 
 .App-link {
   color: #61dafb;
+}
+.prew{
+  border: 2px solid black;
+  width: 60%;
+  height: 300px;
 }
