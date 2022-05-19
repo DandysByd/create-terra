@@ -6,7 +6,7 @@ function VolumeForm(props) {
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
     const [depth, setDepth] = useState(0);
-   
+
 
     //Dimensions setters
     function getValueWidth(e) {
@@ -18,31 +18,25 @@ function VolumeForm(props) {
     function getValueDepth(e) {
         setDepth(e.target.value);
     }
-
+    
+    
+    const dimensions = {
+        width:width,
+        height:height,
+        depth:depth
+    };
     const submitHandler = (e) => {
         e.preventDefault();
-
+        props.onSave(dimensions);
     }
 
     useEffect(() => {
     }, [width, height, depth])
 
-    const onChangeHandler = () => {
-
-
-        const dimensions = {
-            width: width,
-            height: height,
-            depth: depth,
-            volume: width*height*depth
-        }
-        props.onSave(dimensions);
-
-    }
 
     return (
         <div className='dimensions-input' >
-            <form onSubmit={submitHandler} onChange={onChangeHandler}>
+            <form onSubmit={submitHandler}>
                 <div className='dimensions'>
                     <div className='input-fields'>
                         <label>Width</label>
@@ -57,7 +51,7 @@ function VolumeForm(props) {
                         <input onChange={getValueDepth} type='number' id='depth-input'></input>
                     </div>
                 </div>
-                {/* <button type='submit'>Send</button> */}
+                <button className='values-button' type='submit'>Set size</button>
             </form>
         </div>
     )

@@ -1,19 +1,39 @@
-.dimensions-input{
-    width: 60%;
+.dimensions-input {
+    width: 70%;
 }
-.dimensions{
+
+.dimensions {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-around;
 }
-.input-fields{
+
+.input-fields {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.input-fields input{
+
+.input-fields input {
     height: 60px;
     width: 200px;
     font-size: 50px;
+}
+
+.values-button {
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(255, 166, 0);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0;
+    border: none;
+    font-size: 40px;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
 }

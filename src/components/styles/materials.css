@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: flex;
     justify-content: space-around;
-    width: 60%;
+    width: 70%;
 }
 .materials-wrapper div{
     background-color: black;
@@ -17,6 +17,6 @@
 .materials-wrapper div p {
     margin:13px auto;
 }
-.selected-div{
-    background-color: orange !important;
+.selected-div p{
+    text-decoration: underline;
 }

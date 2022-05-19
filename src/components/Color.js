@@ -8,6 +8,7 @@ const Color = (props) => {
     
     const selectColor = (color) =>{
         setSelected(color)
+      
         props.selectColor(color)
     }
     useEffect(()=>{
@@ -16,9 +17,9 @@ const Color = (props) => {
   return (
 
         <div className='color-wrapper'>
-        <Button func={()=>{selectColor(1)}} classDiv={selected===1? 'selected-div' : 'deselected-div'} buttonText='Gray'></Button>
-        <Button func={()=>{selectColor(2)}} classDiv={selected===2? 'selected-div' : 'deselected-div'} buttonText='Yellow'></Button>
-        <Button func={()=>{selectColor(3)}} classDiv={selected===3? 'selected-div' : 'deselected-div'} buttonText='Orange'></Button>
+        <Button bgcolor='rgb(187, 183, 123)' func={()=>{selectColor(1)}} classDiv={selected===1? 'selected-div' : 'deselected-div'}></Button>
+        <Button bgcolor='rgb(63, 63, 63)' func={()=>{selectColor(2)}} classDiv={selected===2? 'selected-div' : 'deselected-div'}></Button>
+        <Button bgcolor='rgb(255, 125, 65)' func={()=>{selectColor(3)}} classDiv={selected===3? 'selected-div' : 'deselected-div'}></Button>
     </div>
   )
 }

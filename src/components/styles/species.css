@@ -1,5 +1,5 @@
 .animal-button{
-    height: 300px;
+    height: 200px;
     cursor: pointer;
     width: 33.3%;
     display: grid;
@@ -10,13 +10,13 @@
 }
 .animal-selection{
     display: flex;
-    width: 60%;
+    width: 70%;
     flex-wrap: wrap;
 }
 
 .show-card{
     width: 100vw;
-    height: 600px;
+    height: 400px;
     opacity: 0.5;
 }
 

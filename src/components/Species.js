@@ -52,7 +52,6 @@ const Species = (props) => {
 
     const showedAnimal = (species) => {
         setSpecie(species)
-
     }
 
     useEffect(() => {
@@ -73,7 +72,7 @@ const Species = (props) => {
                         style={{ backgroundImage: "url(" + animal.image + ")" }}
                         className={specie === animal.id ? 'animal-button show-card' : (specie === 0 ? 'animal-button' : 'animal-button hide-card')}>
                        
-                            <h1 className='animal-header' onMouseEnter={() => showedAnimal(animal.id)}
+                            <h1 className={specie === 0 ? 'hide-info-text' : 'show-info-text'} onMouseEnter={() => showedAnimal(animal.id)}
                         onMouseOut={() => showedAnimal(0)}>{animal.name}</h1>
                             <p className={specie === 0 ? 'hide-info-text' : 'show-info-text'}  onMouseEnter={() => showedAnimal(animal.id)}
                         onMouseOut={() => showedAnimal(0)}>{animal.text}</p>
