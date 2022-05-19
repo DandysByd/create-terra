@@ -40,15 +40,15 @@ function VolumeForm(props) {
                 <div className='dimensions'>
                     <div className='input-fields'>
                         <label>Width</label>
-                        <input onChange={getValueWidth} type='number' id='width-input'></input>
+                        <input  onChange={getValueWidth} min='0' max='150' type='number' id='width-input'></input>
                     </div>
                     <div className='input-fields'>
                         <label>Height</label>
-                        <input onChange={getValueHeight} type='number' id='height-input'></input>
+                        <input onChange={getValueHeight} min='0' max='150' type='number' id='height-input'></input>
                     </div>
                     <div className='input-fields'>
                         <label>Depth</label>
-                        <input onChange={getValueDepth} type='number' id='depth-input'></input>
+                        <input onChange={getValueDepth} min='0' max='60' type='number' id='depth-input'></input>
                     </div>
                 </div>
                 <button className='values-button' type='submit'>Set size</button>
