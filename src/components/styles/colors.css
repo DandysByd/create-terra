@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: flex;
     justify-content: space-around;
-    width: 70%;
+    width: 60%;
 }
 .color-wrapper div{
     background-color: rgb(63, 63, 63);

@@ -1,9 +1,8 @@
 .materials-wrapper{
     display: flex;
     flex-direction: row;
-    align-items: flex;
     justify-content: space-around;
-    width: 70%;
+    width: 60%;
 }
 .materials-wrapper div{
     background-color: #342828;

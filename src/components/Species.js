@@ -16,7 +16,7 @@ const Species = (props) => {
             id: 2,
             name: 'Tortoise',
             text: 'Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.',
-            image: require('../images/tortoise.jpg')
+            image: require('../images/tortoise-big.jpg')
         },
        
         
@@ -24,7 +24,7 @@ const Species = (props) => {
             id: 3,
             name: 'Chinese water dragon',
             text: 'Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.',
-            image: require('../images/chinesewaterdragon.webp')
+            image: require('../images/chinesewaterdragon.png')
         },
         {
             id: 4,

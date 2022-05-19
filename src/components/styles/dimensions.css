@@ -1,5 +1,5 @@
 .dimensions-input {
-    width: 70%;
+    width: 60%;
 }
 
 .dimensions {
@@ -17,8 +17,8 @@
 
 .input-fields input {
     height: 60px;
-    width: 200px;
-    font-size: 50px;
+    width: auto;
+    font-size: 30px;
 }
 
 .values-button {
