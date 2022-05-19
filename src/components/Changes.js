@@ -5,6 +5,7 @@ import Species from './Species';
 import Materials from './Materials';
 import Color from './Color'
 import Layout from './Layout';
+import Wrapper from './Wrapper';
 
 function Changes() {
 
@@ -99,11 +100,19 @@ function Changes() {
     return (
         <>
             <h5 style={{ color: color }}>{layout} - {material} - {animal} - {width + 'x' + height + 'x' + depth}</h5>
-            <Species onSaveSpecies={saveAnimalType} />
-            <VolumeForm onSave={saveDimensions} />
-            <Layout selectedLayout={getSavedLayout} />
-            {showLayouts ? <Materials selectMaterial={getSavedMaterial} /> : <div></div>}
-            <Color selectColor={getSavedColor} />
+            <Wrapper header='Terrarium is going to be for ...'>
+                <Species onSaveSpecies={saveAnimalType} />
+            </Wrapper>
+            <Wrapper header='Choose dimensions for your terrarium ...'>
+                <VolumeForm onSave={saveDimensions} />
+            </Wrapper>
+            <Wrapper header='Front, top, bottom and sides layout ...'>
+                <Layout selectedLayout={getSavedLayout} />
+            </Wrapper>
+            {showLayouts ? <Wrapper header='Material which will be used for creating ...'> <Materials selectMaterial={getSavedMaterial} /></Wrapper> : <div></div>}
+            <Wrapper header='Choose color of plastic background ...'>
+                <Color selectColor={getSavedColor} />
+            </Wrapper>
         </>
     )
 
