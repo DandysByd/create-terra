@@ -1,11 +1,12 @@
 .animal-button{
-    height: 110px;
+    height: 130px;
     cursor: pointer;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
+    border-top: 2px solid black ;
 }
 .animal-selection{
     display: flex;
@@ -16,7 +17,7 @@
 
 .show-card{
     width: 100%;
-    height: 660px;
+    height: 790px;
     opacity: 0.5;
 }
 
@@ -25,7 +26,10 @@
 }
 .hide-info-text{
     display: none;
+    padding: 10px;
+    margin: 10px;
 }
 .show-info-text{
-    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }

@@ -19,6 +19,16 @@ function Changes() {
     const [showLayouts, setShowLayouts] = useState(true)
 
 
+
+
+    const [openAnimal, setOpenAnimal] = useState(true)
+    const [openDimensions, setOpenDimensions] = useState(false)
+    const [openLayout, setOpenLayout] = useState(false)
+    const [openMaterial, setOpenMaterial] = useState(false)
+    const [openColor, setOpenColor] = useState(false)
+   
+
+
     const saveDimensions = (enterDimensionsData) => {
         const dimensions = {
             ...enterDimensionsData
@@ -97,20 +107,24 @@ function Changes() {
     }, [animal, width, layout, height, depth, material, color])
 
 
+    const handleOpen = (j,k) =>{
+        j(k=>!k)
+    }
+
     return (
         <>
             <h5 style={{ color: color }}>{layout} - {material} - {animal} - {width + 'x' + height + 'x' + depth}</h5>
-            <Wrapper header='Terrarium is going to be for ...'>
+            <Wrapper click={()=>handleOpen(setOpenAnimal,openAnimal)} class={openAnimal ? 'section-open' : 'section-closed'} header='Terrarium is going to be for ...'>
                 <Species onSaveSpecies={saveAnimalType} />
             </Wrapper>
-            <Wrapper header='Choose dimensions for your terrarium ...'>
+            <Wrapper click={()=>handleOpen(setOpenDimensions,openDimensions)} class={openDimensions ? 'section-open' : 'section-closed'} header='Choose dimensions for your terrarium ...'>
                 <VolumeForm onSave={saveDimensions} />
             </Wrapper>
-            <Wrapper header='Front, top, bottom and sides layout ...'>
+            <Wrapper click={()=>handleOpen(setOpenLayout,openLayout)} class={openLayout ? 'section-open' : 'section-closed'} header='Front, top, bottom and sides layout ...'>
                 <Layout selectedLayout={getSavedLayout} />
             </Wrapper>
-            {showLayouts ? <Wrapper header='Material which will be used for creating ...'> <Materials selectMaterial={getSavedMaterial} /></Wrapper> : <div></div>}
-            <Wrapper header='Choose color of plastic background ...'>
+            {showLayouts && <Wrapper click={()=>handleOpen(setOpenMaterial,openMaterial)} class={openMaterial ? 'section-open' : 'section-closed'} header='Material which will be used for creating ...'> <Materials selectMaterial={getSavedMaterial} /></Wrapper>}
+            <Wrapper click={()=>handleOpen(setOpenColor,openColor)} class={openColor ? 'section-open' : 'section-closed'} header='Choose color of plastic background ...'>
                 <Color selectColor={getSavedColor} />
             </Wrapper>
         </>

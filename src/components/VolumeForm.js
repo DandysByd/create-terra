@@ -36,7 +36,7 @@ function VolumeForm(props) {
                     </div>
                     <div className='input-fields'>
                         <label>Depth</label>
-                        <input ref={depth} min='0' max='60' type='number' id='depth-input'></input>
+                        <input ref={depth} min='45' max='60' type='number' id='depth-input'></input>
                     </div>
                 </div>
                 <button className='values-button' type='submit'>Set size</button>

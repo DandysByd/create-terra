@@ -14,7 +14,7 @@ const Layout = (props) => {
         
   return (
     <div className='materials-wrapper'>
-        <Button func={()=>{selectLayout(1)}} classDiv={selectedLayout===1? 'selected-div' : 'deselected-div'} buttonText='Full glass'></Button>
+        <Button func={()=>{selectLayout(1)}} classDiv={selectedLayout===1? 'selected-div' : 'deselected-div'} buttonText='Only glass'></Button>
         <Button func={()=>{selectLayout(2)}} classDiv={selectedLayout===2? 'selected-div' : 'deselected-div'} buttonText='Glass sides, rest wooden'></Button>
         <Button func={()=>{selectLayout(3)}} classDiv={selectedLayout===3? 'selected-div' : 'deselected-div'} buttonText='Front glass, rest wooden'></Button>
     </div>
