@@ -10,8 +10,6 @@ function App() {
     <div className="App">
       <div className="App-body">
         <h1>Create your own terrarium design</h1>
-        <h3>Preview</h3>
-        <div className='prew'></div>
         <Changes />
 
 

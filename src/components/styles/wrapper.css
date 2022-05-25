@@ -1,12 +1,24 @@
 .wrapper-div{
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 30px;
+
 }
+.holder-clickable{
+    width: 60%;
+    background-color: rgb(129, 161, 119);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2px;
+}
+
 .holder{
+    pointer-events: none;
     width: 60%;
     background-color: rgb(129, 161, 119);
     display: flex;
@@ -30,7 +42,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.holder h2{
+.holder-clickable h2{
     cursor: pointer;
 }
 

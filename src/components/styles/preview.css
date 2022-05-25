@@ -1,4 +1,23 @@
-.preview-terrarium{
-    border: 1px solid black;
+.table-cell{
+    width: 5px;
+    height: 5px;
+    border: 1px dashed rgb(0, 0, 0);
 }
-
+.container{
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.table-holder{
+    height: auto;
+    width: 60%;
+    cursor: pointer;
+}
+.platform-img{
+    width: 100%;
+}
