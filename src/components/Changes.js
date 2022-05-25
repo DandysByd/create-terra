@@ -7,6 +7,7 @@ import Color from './Color'
 import Layout from './Layout';
 import Wrapper from './Wrapper';
 import Preview from './Preview';
+import ContactForm from './ContactForm';
 
 function Changes() {
 
@@ -19,24 +20,13 @@ function Changes() {
     const [layout, setLayout] = useState(null);
     const [showLayouts, setShowLayouts] = useState(true)
 
-
-
     const [openAnimal, setOpenAnimal] = useState(true)
     const [openDimensions, setOpenDimensions] = useState(false)
     const [openLayout, setOpenLayout] = useState(false)
     const [openMaterial, setOpenMaterial] = useState(false)
     const [openColor, setOpenColor] = useState(false)
 
-
-
-    const saveDimensions = (enterDimensionsData) => {
-        const dimensions = {
-            ...enterDimensionsData
-        }
-        setWidth(enterDimensionsData.width)
-        setHeight(enterDimensionsData.height)
-        setDepth(enterDimensionsData.depth)
-    }
+    const [checked, setChecked] = useState(false)
 
     const saveAnimalType = (enteredAnimal) => {
         setAnimal(enteredAnimal)
@@ -44,6 +34,13 @@ function Changes() {
         setHeight(0)
         setDepth(0)
     }
+
+    const saveDimensions = (enterDimensionsData) => {
+        setWidth(enterDimensionsData.width)
+        setHeight(enterDimensionsData.height)
+        setDepth(enterDimensionsData.depth)
+    }
+
 
     const getSavedLayout = (layout) => {
 
@@ -102,15 +99,15 @@ function Changes() {
             case 4:
                 setColor('rgb(48, 36, 16)')
                 break;
+            case 5:
+                setColor('rgb(49, 83, 54)')
+                break;
             default:
                 setColor("")
                 break;
         }
     }
 
-
-    // useEffect(() => {
-    // }, [animal, width, layout, height, depth, material, color])
 
 
     const handleOpen = (j, k) => {
@@ -123,17 +120,24 @@ function Changes() {
             <Wrapper sel={'-clickable'} click={() => handleOpen(setOpenAnimal, openAnimal)} class={openAnimal ? 'section-open' : 'section-closed'} header='Terrarium is going to be for ...'>
                 <Species onSaveSpecies={saveAnimalType} />
             </Wrapper>
-            <Wrapper sel={animal!=null ? '-clickable' : ''} click={() => handleOpen(setOpenDimensions, openDimensions)} class={animal!=null || openDimensions ? 'section-open' : 'section-closed'} header='Choose dimensions for your terrarium'>
-                <VolumeForm animal={animal} onSave={saveDimensions} /> 
+            <Wrapper sel={animal != null ? '-clickable' : ''} click={() => handleOpen(setOpenDimensions, openDimensions)} class={animal != null || openDimensions ? 'section-open' : 'section-closed'} header='Choose dimensions for your terrarium'>
+                <VolumeForm onSave={saveDimensions} />
             </Wrapper>
-            <Wrapper sel={width&&height&&depth!=null ? '-clickable' : ''} click={() => handleOpen(setOpenLayout, openLayout)} class={width&&height&&depth!=null || openLayout ? 'section-open' : 'section-closed'} header='Front, top, bottom and sides layout'>
+            <Wrapper sel={width && height && depth != null ? '-clickable' : ''} click={() => handleOpen(setOpenLayout, openLayout)} class={width && height && depth != null || openLayout ? 'section-open' : 'section-closed'} header='Front, top, bottom and sides layout'>
                 <Layout selectedLayout={getSavedLayout} />
             </Wrapper>
-            {showLayouts && <Wrapper sel={layout!=null ? '-clickable' : ''} click={() => handleOpen(setOpenMaterial, openMaterial)} class={layout!=null || openMaterial ? 'section-open' : 'section-closed'} header='Material which will be used for creating'> <Materials selectMaterial={getSavedMaterial} /></Wrapper>}
-            <Wrapper sel={material!=null ? '-clickable' : ''} click={() => handleOpen(setOpenColor, openColor)} class={material!=null || openColor ? 'section-open' : 'section-closed'} header='Choose color of plastic background'>
+            {showLayouts && <Wrapper sel={layout != null ? '-clickable' : ''} click={() => handleOpen(setOpenMaterial, openMaterial)} class={layout != null || openMaterial ? 'section-open' : 'section-closed'} header='Material which will be used for creating'> <Materials selectMaterial={getSavedMaterial} /></Wrapper>}
+            <Wrapper sel={material != null ? '-clickable' : ''} click={() => handleOpen(setOpenColor, openColor)} class={material != null || openColor ? 'section-open' : 'section-closed'} header='Choose color of plastic background'>
                 <Color selectColor={getSavedColor} />
             </Wrapper>
-            <Preview material={material} layout={layout} backgroundColor={color} />
+
+            <div className='layout-container'>
+                <label>I want to create my own layout</label>
+                <input type="checkbox" onChange={() => setChecked(!checked)}></input>
+            </div>
+            {checked && <Preview width={width} height={height} material={material} layout={layout} backgroundColor={color} />}
+
+            <ContactForm />
         </>
     )
 

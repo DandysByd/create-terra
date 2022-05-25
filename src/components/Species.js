@@ -4,13 +4,16 @@ import './styles/species.css'
 const Species = (props) => {
 
     const [specie, setSpecie] = useState(0)
+    console.log(specie)
+
 
     const animals = [
         {
             id: 1,
-            name: 'Snake',
+            name: 'Python / Snake',
             text: 'Lorem ipsum dolor sit ahmed. Kentaur has died due to covid. Lorem ipsum dolor sit ahmed. Kentaur has died due to covid. Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid. Lorem ipsum dolor sit ahmed. Kentaur has died due to covid. Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid. Lorem ipsum dolor sit ahmed. Kentaur has died due to covid. Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.Lorem ipsum dolor sit ahmed. Kentaur has died due to covid.',
-            image: require('../images/python.jpg')
+            image: require('../images/python.jpg'),
+           
         },
         {
             id: 2,
@@ -53,10 +56,6 @@ const Species = (props) => {
     const showedAnimal = (species) => {
         setSpecie(species)
     }
-
-    useEffect(() => {
-    }, [specie])
-
 
 
     return (

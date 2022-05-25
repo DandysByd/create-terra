@@ -3,19 +3,29 @@
     height: 5px;
     border: 1px dashed rgb(0, 0, 0);
 }
-.container{
-    width: 70%;
+.container-square{
+    width: 60%;
     margin-top: 2%;
     margin-bottom: 3%;
     aspect-ratio: 16/9;
     display: flex;
-    align-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container-rectangle{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-content: flex-start;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .table-holder{
     height: auto;
-    width: 60%;
+    width: 70%;
     cursor: pointer;
 }
 .platform-img{

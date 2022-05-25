@@ -6,3 +6,7 @@
 .wrapper{
     width: 100%;
 }
+.layout-container{
+    display: flex;
+    align-items: center;
+}

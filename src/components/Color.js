@@ -21,6 +21,7 @@ const Color = (props) => {
         <Button bgcolor='rgb(63, 63, 63)' func={()=>{selectColor(2)}} classDiv={selected===2? 'selected-div' : 'deselected-div'}></Button>
         <Button bgcolor='rgb(255, 125, 65)' func={()=>{selectColor(3)}} classDiv={selected===3? 'selected-div' : 'deselected-div'}></Button>
         <Button bgcolor='rgb(48, 36, 16)' func={()=>{selectColor(4)}} classDiv={selected===4? 'selected-div' : 'deselected-div'}></Button>
+        <Button bgcolor='rgb(49, 83, 54)' func={()=>{selectColor(5)}} classDiv={selected===5? 'selected-div' : 'deselected-div'}></Button>
     </div>
   )
 }
