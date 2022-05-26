@@ -8,6 +8,8 @@ import Layout from './Layout';
 import Wrapper from './Wrapper';
 import Preview from './Preview';
 import ContactForm from './ContactForm';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 function Changes() {
 
@@ -116,7 +118,7 @@ function Changes() {
 
     return (
         <>
-            <h5 style={{ color: color }}>{layout} - {material} - {animal} - {width + 'x' + height + 'x' + depth}</h5>
+            <h5> {width + 'x' + height + 'x' + depth}</h5>
             <Wrapper sel={'-clickable'} click={() => handleOpen(setOpenAnimal, openAnimal)} class={openAnimal ? 'section-open' : 'section-closed'} header='Terrarium is going to be for ...'>
                 <Species onSaveSpecies={saveAnimalType} />
             </Wrapper>
@@ -135,7 +137,13 @@ function Changes() {
                 <label>I want to create my own layout</label>
                 <input type="checkbox" onChange={() => setChecked(!checked)}></input>
             </div>
-            {checked && <Preview width={width} height={height} material={material} layout={layout} backgroundColor={color} />}
+            {checked &&
+                <section className='preview-section'>
+                    <DndProvider backend={HTML5Backend}>
+                        <Preview animal={animal} width={width} height={height} material={material} layout={layout} backgroundColor={color} />
+                    </DndProvider>
+                </section>
+            }
 
             <ContactForm />
         </>

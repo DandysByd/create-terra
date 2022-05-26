@@ -1,14 +1,15 @@
-import React from 'react'
-import OneCell from './OneCell';
+import React, { useState } from 'react'
+import { useDrop } from 'react-dnd';
+import ComponentImage from './ComponentImage';
 import './styles/preview.css'
 
 function Preview(props) {
 
-  var width = props.width;
-  var height = props.height;
+  var width = 50;
+  var height = 50;
   var borderLeft, borderRight, borderTop, borderBottom, color
-
-
+  
+  
   switch (props.material) {
     case 'OSB':
       color = '12px solid rgb(88, 78, 44)'
@@ -19,20 +20,20 @@ function Preview(props) {
     case 'White laminate':
       color = '12px solid white'
       break;
-    default:
-      color = ''
+      default:
+        color = ''
       break;
-  }
-
-  if (props.layout === "Front glass, rest wooden") {
-    borderLeft = borderRight = borderTop = borderBottom = color
+    }
+    
+    if (props.layout === "Front glass, rest wooden") {
+      borderLeft = borderRight = borderTop = borderBottom = color
   } else if (props.layout === 'Glass sides, rest wooden') {
     borderLeft = borderRight = '12px solid gray'
     borderTop = borderBottom = color
   } else {
     borderLeft = borderRight = borderTop = borderBottom = '12px solid gray'
   }
-
+  
 
   if (width / height > 4) {
     height = Math.floor(height / 5)
@@ -49,13 +50,96 @@ function Preview(props) {
   }
 
   let proportions = width / height
+  
+  
+  const equipment = {
+    
+    'Python / Snake': [
+      {
+        id: 1,
+        name: 'Cork tunnel',
+        img: require('../componentsImages/cork-tunnel.png')
+      },
+      {
+        id: 2,
+        name: 'Spider wood',
+        img: require('../componentsImages/spider-wood.png')
+      },
 
+    ],
+    'Tortoise': [
+      {
+        id: 1,
+        name: ''
+        
+      }
+    ],
+    'Chinese water dragon': [
+      {
+        id: 1,
+        name: ''
+        
+      }
+    ],
+    'Bearded dragon': [
+      {
+        id: 1,
+        name: ''
+        
+      }
+    ],
+    'Creseted gecko': [
+      {
+        id: 1,
+        name: ''
+        
+      }
+    ],
+    'Chameleon': [
+      {
+        id: 1,
+        name: ''
+        
+      }
+    ],
+  }
+  
+  var [box, setBox] = useState([])
+  const [{ isOver }, drop] = useDrop(() => ({
 
+  
+    accept: 'image',
+    drop: (item) => addImageToBox(item.id),
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    })
+  }))
+
+  const addImageToBox = (id) => {
+    const pictureList = equipment[props.animal].filter((x)=> id === x.id)
+    setBox((box)=>[...box,pictureList[0]])
+  }
+  
+  
   return (
-    <section className={proportions >=2 ? 'container-rectangle':'container-square'}>
-      <table style={{ borderTop: borderTop, borderLeft: borderLeft, borderRight: borderRight, borderBottom: borderBottom, backgroundColor: props.backgroundColor, aspectRatio: width / height }} cellSpacing='0' className='table-holder' >
-      <OneCell width={width} height={height}/>
-      </table>
+    <section className={proportions >= 2 ? 'container-rectangle' : 'container-square'}>
+      <div ref={drop} style={{ borderTop: borderTop, borderLeft: borderLeft, borderRight: borderRight, borderBottom: borderBottom, backgroundColor: props.backgroundColor, aspectRatio: width / height }} className='table-holder' >
+        {box.map((x) => {
+          return (
+            <img className='single-component' src={x.img} />
+            )
+          })}
+      </div>
+
+
+      <div>
+        <h6>Terarium equipment for {props.animal}</h6>
+        {equipment[props.animal].map((x, i) => {
+          return (
+            <ComponentImage id={x.id} url={x.img} name={x.name} alt={x.name} />
+          )
+        })}
+      </div>
     </section>
   )
 }

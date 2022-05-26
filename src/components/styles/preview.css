@@ -31,3 +31,11 @@
 .platform-img{
     width: 100%;
 }
+
+.component-image{
+    width: 70px;
+    cursor: pointer;
+}
+.single-component{
+    width: 70px;
+}
