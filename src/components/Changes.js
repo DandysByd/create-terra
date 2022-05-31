@@ -10,6 +10,7 @@ import Preview from './Preview';
 import ContactForm from './ContactForm';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import Button from './Button';
 
 function Changes() {
 
@@ -29,12 +30,17 @@ function Changes() {
     const [openColor, setOpenColor] = useState(false)
 
     const [checked, setChecked] = useState(false)
+    let reset = false
 
     const saveAnimalType = (enteredAnimal) => {
         setAnimal(enteredAnimal)
         setWidth(0)
         setHeight(0)
         setDepth(0)
+        setMaterial(null)
+        setColor(null)
+        setLayout(null)
+        setChecked(false)
     }
 
     const saveDimensions = (enterDimensionsData) => {
@@ -116,9 +122,11 @@ function Changes() {
         j(k => !k)
     }
 
+  
+
+
     return (
         <>
-            <h5> {width + 'x' + height + 'x' + depth}</h5>
             <Wrapper sel={'-clickable'} click={() => handleOpen(setOpenAnimal, openAnimal)} class={openAnimal ? 'section-open' : 'section-closed'} header='Terrarium is going to be for ...'>
                 <Species onSaveSpecies={saveAnimalType} />
             </Wrapper>
@@ -132,13 +140,14 @@ function Changes() {
             <Wrapper sel={material != null ? '-clickable' : ''} click={() => handleOpen(setOpenColor, openColor)} class={material != null || openColor ? 'section-open' : 'section-closed'} header='Choose color of plastic background'>
                 <Color selectColor={getSavedColor} />
             </Wrapper>
-
-            <div className='layout-container'>
+{/* 
+            <h5> {width + 'x' + height + 'x' + depth}</h5> */}
+            <div className={color === null ? 'layout-container-hide' : 'layout-container'}>
                 <label>I want to create my own layout</label>
-                <input type="checkbox" onChange={() => setChecked(!checked)}></input>
+                <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)}></input>
             </div>
             {checked &&
-                <section className='preview-section'>
+                <section  className='preview-section' >
                     <DndProvider backend={HTML5Backend}>
                         <Preview animal={animal} width={width} height={height} material={material} layout={layout} backgroundColor={color} />
                     </DndProvider>

@@ -56,3 +56,25 @@
       justify-content: center;
       cursor: pointer;
   }
+
+  .show-text{
+      display: flex;
+      justify-content: space-around;
+  }
+  .hide-text{
+      display: none;
+  }
+  .items-container{
+    background-color: rgb(129, 161, 119);
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgb(59, 73, 54) ;
+      cursor: pointer;
+  }
+  .items-container-open{
+      background-color: rgb(27, 41, 22);
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgb(59, 73, 54) ;
+      cursor: pointer;
+  }

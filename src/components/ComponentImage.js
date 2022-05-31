@@ -12,8 +12,7 @@ const ComponentImage = (props) => {
         })
     }))
   return (
-    <div>
-         <p>{props.name}-{props.id}</p>
+    <div className='single-component-div'>
             <img className='component-image' ref={drag} src={props.url} alt={props.alt} style={{border: isDragging && '1px solid black'}}></img>
     </div>
   )
