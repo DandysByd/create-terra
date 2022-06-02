@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/create-terra/static/css/main.05128d78.css",
+    "main.js": "/create-terra/static/js/main.24ca6c19.js",
+    "static/js/787.e1c44021.chunk.js": "/create-terra/static/js/787.e1c44021.chunk.js",
+    "static/media/sand.jpg": "/create-terra/static/media/sand.261bf3da7f4e2e7f1b96.jpg",
+    "static/media/python.jpg": "/create-terra/static/media/python.ac87fe1ff67eb2b48022.jpg",
+    "static/media/coco_prev.jpg": "/create-terra/static/media/coco_prev.8182a27cc9bb2d79c93a.jpg",
+    "static/media/gecko.jpg": "/create-terra/static/media/gecko.93b6c2155e12d3b84de4.jpg",
+    "static/media/chinesewaterdragon.png": "/create-terra/static/media/chinesewaterdragon.2839c5bec37a802b532b.png",
+    "static/media/cork-tunnel-1.png": "/create-terra/static/media/cork-tunnel-1.e52f6c5177b81446985f.png",
+    "static/media/stone-2.png": "/create-terra/static/media/stone-2.4a28500796e112692b67.png",
+    "static/media/cork-tunnel.png": "/create-terra/static/media/cork-tunnel.71fde68bcb66de84e171.png",
+    "static/media/stone-1.png": "/create-terra/static/media/stone-1.5aac706d0da7b04032a3.png",
+    "static/media/snake-hide.png": "/create-terra/static/media/snake-hide.59ca16602d5a42d1eab4.png",
+    "static/media/tortoise-big.jpg": "/create-terra/static/media/tortoise-big.163cba540f2d83d325cd.jpg",
+    "static/media/bath-pot.png": "/create-terra/static/media/bath-pot.eff034f7ca4c6a3310e5.png",
+    "static/media/umbrella-plant.png": "/create-terra/static/media/umbrella-plant.c657bb39071c130fb515.png",
+    "static/media/stone-3.png": "/create-terra/static/media/stone-3.71ad630dd80bc2234ced.png",
+    "static/media/chameleon.jpg": "/create-terra/static/media/chameleon.2c1f0ea21aeea07ee345.jpg",
+    "static/media/cork_prev.jpg": "/create-terra/static/media/cork_prev.53d142a28f9e3d254f72.jpg",
+    "static/media/stone_prev.jpg": "/create-terra/static/media/stone_prev.154630f464c8670b7554.jpg",
+    "static/media/vines.png": "/create-terra/static/media/vines.b2e60f36b6db521e9814.png",
+    "static/media/beardeddragon.jpg": "/create-terra/static/media/beardeddragon.a3407bc862a8fb147488.jpg",
+    "static/media/aloe-vera.png": "/create-terra/static/media/aloe-vera.a718cf52722226562a5e.png",
+    "static/media/wooden-ladder.png": "/create-terra/static/media/wooden-ladder.334bfc27c933d2a92e58.png",
+    "static/media/coco.jpg": "/create-terra/static/media/coco.7d144916edb0bd691307.jpg",
+    "static/media/spider-wood-1.png": "/create-terra/static/media/spider-wood-1.6dea4eaef8a4e0d9daca.png",
+    "static/media/cork.jpg": "/create-terra/static/media/cork.4faa9d1f1dfffcf5ce47.jpg",
+    "static/media/spider-wood.png": "/create-terra/static/media/spider-wood.5d85a3ed8d71774af8f5.png",
+    "static/media/spider-wood-2.png": "/create-terra/static/media/spider-wood-2.254734cac6cdbf05a7fc.png",
+    "static/media/stone.jpg": "/create-terra/static/media/stone.b71ee4042a0c51aceed4.jpg",
+    "index.html": "/create-terra/index.html",
+    "main.05128d78.css.map": "/create-terra/static/css/main.05128d78.css.map",
+    "main.24ca6c19.js.map": "/create-terra/static/js/main.24ca6c19.js.map",
+    "787.e1c44021.chunk.js.map": "/create-terra/static/js/787.e1c44021.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05128d78.css",
+    "static/js/main.24ca6c19.js"
+  ]
+}
