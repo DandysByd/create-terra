@@ -8,7 +8,8 @@
 }
 .layout-container{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+
 }
 .layout-container-hide{
     display: flex;

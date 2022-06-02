@@ -6,10 +6,11 @@
     width: 100%;
 }
 .color-wrapper div{
-    background-color: rgb(63, 63, 63);
+    background-position: center;
+    background-size: cover;
     cursor: pointer;
-    width: 33%;
-    height: 60px;
+    width: 40%;
+    height: 80px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -19,4 +20,9 @@
 }
 .selected-div{
     border: 2px solid #768062;
+}
+
+.plastic{
+    display: flex !important;
+    width: 100% !important;
 }
