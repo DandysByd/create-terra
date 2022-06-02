@@ -15,7 +15,7 @@
     align-items: center;
 }
 .container-rectangle{
-    width: 90%;
+    width: 60%;
     margin-top: 2%;
     margin-bottom: 3%;
     aspect-ratio: 16/9;
@@ -37,11 +37,10 @@
     background-size: cover !important;
 }
 .table-holder-k{
-    width: 86%;
+    width: 100%;
     height: auto;
-    margin: 0.5% 7% 5.5% 7%;
     display: grid;
-    grid-template-columns: repeat(20,minmax(0,1fr));   
+    grid-template-columns: repeat(20,minmax(0,1fr));  
 }
 .platform-img{
     width: 100%;

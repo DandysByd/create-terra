@@ -3,6 +3,7 @@ import { Resizable } from 're-resizable';
 import React, { useEffect, useRef, useState } from 'react'
 import { useDrop } from 'react-dnd';
 import Draggable from 'react-draggable';
+import { Rnd } from 'react-rnd';
 import Button from './Button';
 import ComponentImage from './ComponentImage';
 import OpenCloseLayoutItems from './OpenCloseLayoutItems';
@@ -300,14 +301,15 @@ function Preview(props) {
     })
   }
 
-  
 
   return (
     <section className={proportions >= 2 ? 'container-rectangle' : 'container-square'}>
-      
-      <div  ref={drop}    style={{borderTop: borderTop, borderLeft: borderLeft, borderRight: borderRight, borderBottom: borderBottom, backgroundColor: props.backgroundColor, opacity:0.7, aspectRatio: width / height }} id='idk' className='table-holder' >
+        
+      <div  ref={drop}    style={{borderTop: borderTop, borderLeft: borderLeft, borderRight: borderRight, borderBottom: borderBottom, opacity:0.7, aspectRatio: width / height }} id='idk' className='table-holder' >
+       <div style={{background: props.backgroundColor}} className='table-holder-k'>
         {box.map((x) => {
           return (
+            
             <Draggable>
             <Resizable
             maxWidth={originalWidth}
@@ -320,8 +322,10 @@ function Preview(props) {
                   <img onDoubleClick={() => removeItem(x.randomKey)} alt={x.name} className='single-component' src={x.img} />
             </Resizable>
               </Draggable>
+              
           )
         })}
+        </div>
       </div>
 
       <div>
@@ -331,29 +335,29 @@ function Preview(props) {
         {universal['Cork tunnels'].map(x=>{
           return(
             <ComponentImage id={x.id} url={x.img} alt={x.name} />
-          )
-        })}
+            )
+          })}
         </OpenCloseLayoutItems>
         <OpenCloseLayoutItems header='Wood'>
         {universal['Wood'].map(x=>{
           return(
             <ComponentImage id={x.id} url={x.img} alt={x.name} />
-          )
-        })}
+            )
+          })}
         </OpenCloseLayoutItems>
         <OpenCloseLayoutItems header='Stone'>
         {universal['Stone'].map(x=>{
           return(
             <ComponentImage id={x.id} url={x.img} alt={x.name} />
-          )
-        })}
+            )
+          })}
         </OpenCloseLayoutItems>
         <OpenCloseLayoutItems header={props.animal + ' specific'}>
         {equipment[props.animal].map((i) => {
           return (
             <ComponentImage id={i.id} url={i.img} name={i.name} alt={i.name} />
-          )
-        })}
+            )
+          })}
         </OpenCloseLayoutItems>
           </div>
     </section>

@@ -110,6 +110,18 @@ function Changes() {
             case 5:
                 setColor('rgb(49, 83, 54)')
                 break;
+            case 6:
+                setColor("url(" + require('../backgroundImages/coco_prev.jpg') + ")")
+                break;
+            case 7:
+                setColor("url(" + require('../backgroundImages/stone_prev.jpg') + ")")
+                break;
+            case 8:
+                setColor("url(" + require('../backgroundImages/cork_prev.jpg') + ")")
+                break;
+            case 9:
+                setColor("url(" + require('../backgroundImages/sand.jpg') + ")")
+                break;
             default:
                 setColor("")
                 break;
@@ -122,7 +134,7 @@ function Changes() {
         j(k => !k)
     }
 
-  
+
 
 
     return (
@@ -137,19 +149,20 @@ function Changes() {
                 <Layout selectedLayout={getSavedLayout} />
             </Wrapper>
             {showLayouts && <Wrapper sel={layout != null ? '-clickable' : ''} click={() => handleOpen(setOpenMaterial, openMaterial)} class={layout != null || openMaterial ? 'section-open' : 'section-closed'} header='Material which will be used for creating'> <Materials selectMaterial={getSavedMaterial} /></Wrapper>}
-            <Wrapper sel={material != null ? '-clickable' : ''} click={() => handleOpen(setOpenColor, openColor)} class={material != null || openColor ? 'section-open' : 'section-closed'} header='Choose color of plastic background'>
+            <Wrapper sel={material != null ? '-clickable' : ''} click={() => handleOpen(setOpenColor, openColor)} class={material != null || openColor ? 'section-open' : 'section-closed'} header='Choose background'>
                 <Color selectColor={getSavedColor} />
             </Wrapper>
-{/* 
+            {/* 
             <h5> {width + 'x' + height + 'x' + depth}</h5> */}
             <div className={color === null ? 'layout-container-hide' : 'layout-container'}>
                 <label>I want to create my own layout</label>
                 <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)}></input>
             </div>
             {checked &&
-                <section  className='preview-section' >
+                <section className='preview-section' >
                     <DndProvider backend={HTML5Backend}>
                         <Preview animal={animal} width={width} height={height} material={material} layout={layout} backgroundColor={color} />
+                 
                     </DndProvider>
                 </section>
             }
