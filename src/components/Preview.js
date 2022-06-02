@@ -186,7 +186,11 @@ function Preview(props) {
         name: 'Hide',
         img: require('../componentsImages/snake-hide.png'),
       },
-
+      {
+        id: 20,
+        name: 'Bath pot',
+        img: require('../componentsImages/bath-pot.png'),
+      },
     ],
     'Tortoise': [
       {
@@ -195,9 +199,9 @@ function Preview(props) {
         img: require('../componentsImages/cork-tunnel.png'),
       },
       {
-        id: 11,
-        name: 'Spider wood',
-        img: require('../componentsImages/spider-wood.png'),
+        id: 20,
+        name: 'Bath pot',
+        img: require('../componentsImages/bath-pot.png'),
       },
     ],
     'Chinese water dragon': [
@@ -207,9 +211,9 @@ function Preview(props) {
         img: require('../componentsImages/cork-tunnel.png'),
       },
       {
-        id: 13,
-        name: 'Spider wood',
-        img: require('../componentsImages/spider-wood.png'),
+        id: 20,
+        name: 'Bath pot',
+        img: require('../componentsImages/bath-pot.png'),
       },
     ],
     'Bearded dragon': [
@@ -249,9 +253,10 @@ function Preview(props) {
       },
       {
         id: 19,
-        name: 'Spider wood',
-        img: require('../componentsImages/spider-wood.png')
+        name: 'Vines',
+        img: require('../componentsImages/vines.png')
       },
+
     ],
   }
 
